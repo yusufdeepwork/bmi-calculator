@@ -15,4 +15,5 @@ const Profile = styled.div`
   margin-bottom: 2vw;
   font-size: 2rem;
   font-family: "Fira Code Medium",monospace;
+  text-align: center  ;
 `

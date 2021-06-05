@@ -40,9 +40,10 @@ const Pages = styled.div`
   margin-top: 1vw;
   font-family: "Fira Code Medium",monospace;
   margin-bottom: 2vw;
-
+  text-align: center;
 `
 const PagesText = styled.text`
   text-decoration-line: underline;
   cursor: pointer;
+  text-align: center;
 `

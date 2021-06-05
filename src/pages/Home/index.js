@@ -29,7 +29,7 @@ export const Home = ({saveIbm}) => {
                </SliderItem>
            </SliderContainer>
             <CalculaterContainer>
-                <CalculateButton>Your BMI : { bmi}</CalculateButton>
+                <CalculateButton style={{cursor:"default"}}>Your BMI : { bmi}</CalculateButton>
                 <CalculateButton onClick={()=> saveIbm(bmi)}>Save </CalculateButton>
             </CalculaterContainer>
 
