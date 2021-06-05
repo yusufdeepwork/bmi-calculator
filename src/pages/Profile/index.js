@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {ProfileContainer} from './styles'
 const Profile = ({ibms}) =>{
 
+    // ibms= ibms? [...ibms]  :localStorage.getItem("ibms")
+    console.log(ibms)
+
     return(
         <ProfileContainer>
             <h5>Your IBM Scores</h5>
