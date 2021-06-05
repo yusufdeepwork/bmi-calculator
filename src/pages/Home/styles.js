@@ -26,17 +26,34 @@ const SliderContainer = styled.div`
   flex-direction: row;
 `
 const SliderItem = styled.div`
-  width: 15vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-left: 2vw;
+  margin-right: 2vw;
+`
+const CalculateButton = styled.div`
+  margin-top: 3vw;
+  border: 2px solid black ;
+  padding: 1vw;
+  font-size: 2.5rem;
+  font-family: "Fira Code Medium",monospace;
+  cursor: pointer;
+`
+const CalculaterContainer = styled.div`
+display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 export {
     HomeContainer,
     InputValue,
     Title,
     SliderContainer,
-    SliderItem
+    SliderItem,
+    CalculateButton,
+    CalculaterContainer
 };

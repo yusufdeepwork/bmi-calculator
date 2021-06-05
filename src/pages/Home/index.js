@@ -1,26 +1,40 @@
 import React, {useState} from 'react';
-import {HomeContainer, InputValue, Title, SliderContainer, SliderItem} from './styles';
-import Slider from 'react-input-slider';
+import {HomeContainer, InputValue, Title, SliderContainer, SliderItem, CalculateButton, CalculaterContainer} from './styles';
+import Slider from 'react-rangeslider'
+import 'react-rangeslider/lib/index.css';
 export const Home = () => {
     console.log("geldi")
     const [info, setInfo] = useState({  weight: 70, height:170});
-
+    const {weight, height} = info;
+    const bmi = (((weight)/(Math.pow(height/100,2)))).toFixed(4);
     return(
         <HomeContainer>
            <SliderContainer>
+
                <SliderItem>
-                   <Title>Boyunuz</Title>
-                   <Slider axis="x" xstep={1} xmin={0} xmax={220} x={info.height}
-                             onChange={({ x }) => setInfo({ weight:info.weight,height: parseFloat(x.toFixed(2)) })}
-                   />
-                   <InputValue>{info.height} cm</InputValue></SliderItem>
+                   <Title>Your Height</Title>
+                   <div  style={{width:"100%"}}>
+                   <Slider min={20} max={251} value={height}
+                           onChange={( x )=> setInfo({height: x,weight: weight})}
+                   /></div>
+                   <InputValue>{height} cm</InputValue>
+               </SliderItem>
+
                <SliderItem>
-                   <Title>Kilonuz</Title>
-                   <Slider axis="x" xstep={1} xmin={0} xmax={220} x={info.weight}
-                           onChange={({ x }) => setInfo({ height:info.height,weight: parseFloat(x.toFixed(2)) })}
-                   />
-                   <InputValue>{info.weight} kg</InputValue></SliderItem>
+                   <Title>Your Weight</Title>
+                   <div  style={{width:"100%"}}>
+                       <Slider min={20} max={251} value={weight}
+                               onChange={( x )=> setInfo({weight: x,height: height})}
+                       /></div>
+                   <InputValue>{weight} kg</InputValue>
+               </SliderItem>
            </SliderContainer>
+            <CalculaterContainer>
+                <CalculateButton>Your BMI : { bmi}</CalculateButton>
+                <CalculateButton>Save </CalculateButton>
+            </CalculaterContainer>
+
+
         </HomeContainer>
     )
 
