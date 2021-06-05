@@ -1,14 +1,13 @@
-import React, {useState} from 'react';
-import {ProfileContainer} from './styles'
+import React from 'react';
+import {ProfileContainer, TitleText} from './styles'
 const Profile = ({ibms}) =>{
-
-    // ibms= ibms? [...ibms]  :localStorage.getItem("ibms")
-    console.log(ibms)
 
     return(
         <ProfileContainer>
-            <h5>Your IBM Scores</h5>
+
+            <TitleText>Your IBM Scores</TitleText>
             {ibms.map((ibm,index)=> <div>{(index+1)+" : "+ibm.toString()}</div>)}
+            <TitleText>you should make diet list.</TitleText>
     </ProfileContainer>)
 }
 export default Profile;

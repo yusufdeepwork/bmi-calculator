@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {Title} from "./Title";
 
 const Header = () => {
     return (
         <header>
             <Container>
-                <Profile>
-                    hoşgeldin Yusuf
-                </Profile>
+                <Title/>
                 <Pages>
                     <PagesText><Link to={"/"}>BMI CALCULATOR</Link></PagesText>
                     <text> | </text>
@@ -23,17 +22,6 @@ const Header = () => {
 
 export default Header;
 
-const Title = styled.div`
-
-  margin-bottom: 2vw;
-  font-size: 2.5rem;
-  font-family: "Fira Code Medium",monospace;
-`;
-const Profile = styled.div`
-  margin-bottom: 2vw;
-  font-size: 2.5rem;
-  font-family: "Fira Code Medium",monospace;
-`
 const Container = styled.div`
   margin-top: 4%;
     justify-self: center;

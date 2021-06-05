@@ -9,6 +9,13 @@ const ProfileContainer = styled.div`
   align-items: center;
   justify-content: center;
 `
+const TitleText = styled.h5`
+    text-align: center;
+  font-family: "Fira Code Medium",monospace;
+  align-items: center;
+  justify-content: center;
+`
 export {
-    ProfileContainer
+    ProfileContainer,
+    TitleText
 };
