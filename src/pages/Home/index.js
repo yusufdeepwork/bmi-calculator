@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import {HomeContainer, InputValue, Title, SliderContainer, SliderItem, CalculateButton, CalculaterContainer} from './styles';
 import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css';
-export const Home = () => {
-    console.log("geldi")
+export const Home = ({saveIbm}) => {
     const [info, setInfo] = useState({  weight: 70, height:170});
     const {weight, height} = info;
     const bmi = (((weight)/(Math.pow(height/100,2)))).toFixed(4);
@@ -31,7 +30,7 @@ export const Home = () => {
            </SliderContainer>
             <CalculaterContainer>
                 <CalculateButton>Your BMI : { bmi}</CalculateButton>
-                <CalculateButton>Save </CalculateButton>
+                <CalculateButton onClick={()=> saveIbm(bmi)}>Save </CalculateButton>
             </CalculaterContainer>
 
 

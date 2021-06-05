@@ -1,30 +1,21 @@
 import React from 'react';
-
-import { Link } from 'react-router-dom';
-
-import { routes } from '../config/Router';
 import styled from "styled-components";
-
+import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
         <header>
             <Container>
-
                 <Profile>
                     hoşgeldin Yusuf
                 </Profile>
                 <Pages>
-                    <PagesText>BMI CALCULATOR</PagesText>
-                        |
+                    <PagesText><Link to={"/"}>BMI CALCULATOR</Link></PagesText>
+                    <text> | </text>
+                    <Link to={"/profile"} >
                     <PagesText>Profile</PagesText>
-
-
-
+                </Link>
                 </Pages>
-                <Title>
-                    BMI CALCULATOR
-                </Title>
             </Container>
         </header>
     );
