@@ -4,7 +4,9 @@ import Layout from "./components/Layout";
 import {Home} from "./pages/Home";
 import Profile from "./pages/Profile";
 function App() {
-    const [ibms, setIbms] = useState(localStorage.getItem("ibms").split(",") || []);
+    const localstorage = localStorage.getItem("ibms")?
+        localStorage.getItem("ibms").split(","):null;
+    const [ibms, setIbms] = useState( localstorage || []);
 
     const saveIbm = (ibm) => {
         const copyIbm = [...ibms];
